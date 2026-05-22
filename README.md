@@ -1,5 +1,9 @@
 # check-layers
 
+[![ci](https://github.com/pilot-protocol/check-layers/actions/workflows/ci.yml/badge.svg)](https://github.com/pilot-protocol/check-layers/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/pilot-protocol/check-layers/branch/main/graph/badge.svg)](https://codecov.io/gh/pilot-protocol/check-layers)
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+
 Generic Go-module architecture linter. Reads a `layers.yaml` file at the repo root, walks `go list -json ./...`, and exits non-zero on any import that violates the declared layering. Drop it into any Go repo with a `layers.yaml` and it works — nothing in it is project-specific.
 
 ## Install
@@ -48,3 +52,7 @@ known_transitional:
   - from: github.com/example/proj/internal/legacy
     to:   github.com/example/proj/internal/newer
 ```
+
+## License
+
+AGPL-3.0-or-later. See [LICENSE](LICENSE).
